@@ -1,0 +1,25 @@
+id,name,start,end,len,typ,description
+1,date,1,8,8,D,YYYYMMDD- Day the trade or quote was entered
+2,time,9,14,6,V,HHMMSS- Time the trade or quote was entered in the system
+3,seq,15,22,8,I,######## - sequence the quote or trade was entered into the system
+4,session,23,23,1,C,(R/E) Indicates the Regular (PIT) or Electronic (GLOBEX) trading session
+5,sym,24,26,3,S,The product code
+6,fo,27,27,1,C,Futures (F) / Options (O) - Indicates the type of market data
+7,expiry,28,31,4,M,(YYMM) Indicates the month the contract expires
+8,qty,32,36,5,I,Number of contracts available for trade or traded
+9,strk,37,43,7,I,The strike or exercise price of the optionif applicable
+10,strkdl,44,44,1,H,Decimal place indicator for strike price
+11,px,45,51,7,I,Indicates actual price traded
+12,pxdl,52,52,1,H,Decimal place indicator for traded price
+13,side,53,53,1,C,Indicates for Bids (B) / Offers (A)
+14,ind,54,54,1,C,Indicative Market Quotes ( I )
+15,mq,55,55,1,C,Indicator for Market Quotes ( M )
+16,oc,56,56,1,C,Indicator for Open ( O ) / Close ( C )
+17,voe,57,58,2,S,Indicator for Special Open ( O )
+18,postc,59,59,1,C,Indicator for prices traded after the market close ( P )
+19,xld,60,60,1,C,Indicator for canceled prices ( X )
+20,ins,61,61,1,C,Indicator for  Inserted prices ( I )
+21,fstlt,62,62,1,C,Indicator for Fast/Late Market ( F )
+22,cab,63,63,1,C,Indicator for cabinet trades ( $ )
+23,book,64,64,1,C,Indicator for Book quotes ( B )
+24,edate,65,70,6,D,YYMMDD - Entry date of trade
