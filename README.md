@@ -4,6 +4,11 @@ Clone this project and start q with either of the following commands
 to see q load and analyze either 'trade and sales' or 'best bid and
 offer' data.
 
+Note that the you must first dissable KDB+'s SSL verification by
+setting the `SSL_VERIFY_SERVER` variable to `NO` in order to download
+the files via the https protocol.  If you accidentally download empty
+files, delete them and run the code again.
+
 All six data sets are downloaded, but only one is loaded.  Change the
 file saved in variable `f` to load a different data set.
 
@@ -13,17 +18,18 @@ character `\`.
 ## Time and Sales Data
 
 ```
+bash-3.2$ export SSL_VERIFY_SERVER=NO
 bash-3.2$ q ts.q
 KDB+ 3.5 2017.03.15 Copyright (C) 1993-2017 Kx Systems
 m32/ 4()core 8192MB nick nicks-macbookpro.local 25.34.72.89 NONEXPIRE  
 
 downloading sample time and sales datasets
-"http://www.cmegroup.com/market-data/datamine-historical-data/files/2012-11-05-corn-fu..
-"http://www.cmegroup.com/market-data/datamine-historical-data/files/2012-11-05-crude-o..
-"http://www.cmegroup.com/market-data/datamine-historical-data/files/2012-11-05-e-mini-..
-"http://www.cmegroup.com/market-data/datamine-historical-data/files/2012-11-05-euro-fx..
-"http://www.cmegroup.com/market-data/datamine-historical-data/files/2012-11-05-eurodol..
-"http://www.cmegroup.com/market-data/datamine-historical-data/files/2012-11-05-gold-fu..
+"https://www.cmegroup.com/market-data/datamine-historical-data/files/2012-11-05-corn-fu..
+"https://www.cmegroup.com/market-data/datamine-historical-data/files/2012-11-05-crude-o..
+"https://www.cmegroup.com/market-data/datamine-historical-data/files/2012-11-05-e-mini-..
+"https://www.cmegroup.com/market-data/datamine-historical-data/files/2012-11-05-euro-fx..
+"https://www.cmegroup.com/market-data/datamine-historical-data/files/2012-11-05-eurodol..
+"https://www.cmegroup.com/market-data/datamine-historical-data/files/2012-11-05-gold-fu..
 loading CSV time and sales dataset: 2012-11-05-e-mini-s-p-futures.csv
 renaming columns
 generating trade table
@@ -57,22 +63,23 @@ expiry  seq  time                          tp      ts
 ## Best Bid and Offer Data
 
 ```
+bash-3.2$ export SSL_VERIFY_SERVER=NO
 bash-3.2$ q bbo.q
 KDB+ 3.5 2017.03.15 Copyright (C) 1993-2017 Kx Systems
 m32/ 4()core 8192MB nick nicks-macbookpro.local 25.34.72.89 NONEXPIRE  
 
 downloading and extracting sample best bid and offer datasets
-"http://www.cmegroup.com/market-data/datamine-historical-data/files/XCBT_C_FUT_110110...
+"https://www.cmegroup.com/market-data/datamine-historical-data/files/XCBT_C_FUT_110110...
 "unzip -u XCBT_C_FUT_110110.zip"
-"http://www.cmegroup.com/market-data/datamine-historical-data/files/XNYM_CL_FUT_110110..
+"https://www.cmegroup.com/market-data/datamine-historical-data/files/XNYM_CL_FUT_110110..
 "unzip -u XNYM_CL_FUT_110110.zip"
-"http://www.cmegroup.com/market-data/datamine-historical-data/files/XCME_ES_FUT_110110..
+"https://www.cmegroup.com/market-data/datamine-historical-data/files/XCME_ES_FUT_110110..
 "unzip -u XCME_ES_FUT_110110.zip"
-"http://www.cmegroup.com/market-data/datamine-historical-data/files/XCME_EC_FUT_110110..
+"https://www.cmegroup.com/market-data/datamine-historical-data/files/XCME_EC_FUT_110110..
 "unzip -u XCME_EC_FUT_110110.zip"
-"http://www.cmegroup.com/market-data/datamine-historical-data/files/XCME_ED_FUT_110110..
+"https://www.cmegroup.com/market-data/datamine-historical-data/files/XCME_ED_FUT_110110..
 "unzip -u XCME_ED_FUT_110110.zip"
-"http://www.cmegroup.com/market-data/datamine-historical-data/files/XNYM_GC_FUT_110110..
+"https://www.cmegroup.com/market-data/datamine-historical-data/files/XNYM_GC_FUT_110110..
 "unzip -u XNYM_GC_FUT_110110.zip"
 loading fixed width bbo meta information
 nulling unwanted columns

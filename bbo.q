@@ -2,7 +2,7 @@
 
 / https://www.cmegroup.com/confluence/display/EPICSANDBOX/Top+of+Book+-+BBO
 
-b:"http://www.cmegroup.com/market-data/datamine-historical-data/files/"
+b:"https://www.cmegroup.com/market-data/datamine-historical-data/files/"
 d:()!()
 d[`corn]:"XCBT_C_FUT_110110"
 d[`crude]:"XNYM_CL_FUT_110110"

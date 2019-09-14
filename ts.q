@@ -2,7 +2,7 @@
 
 / https://www.cmegroup.com/confluence/display/EPICSANDBOX/Time+and+Sales
 
-b:"http://www.cmegroup.com/market-data/datamine-historical-data/files/"
+b:"https://www.cmegroup.com/market-data/datamine-historical-data/files/"
 d:()!()
 d[`corn]:"2012-11-05-corn-futures.csv"
 d[`crude]:"2012-11-05-crude-oil-futures.csv"
